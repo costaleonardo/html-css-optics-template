@@ -1,0 +1,22 @@
+/* ---------- Services Section  ---------- */
+
+.section--services {
+  .fa {
+    font-size: 36px;
+    color: $green;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  h4 {
+    border-bottom: 1px solid $green-light;
+    padding-bottom: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: #888;
+    margin-bottom: 20px;
+  }
+}

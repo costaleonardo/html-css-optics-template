@@ -1,0 +1,14 @@
+/* ---------- Portfolio Section  ---------- */
+
+.section--portfolio {
+  background-color: $gray-light;
+
+  img {
+    transition: all .5s;
+  }
+
+  img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,456 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #333; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+.image {
+  width: 100%;
+  height: 250px; }
+
+.image--team {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 25px; }
+
+/* ---------- Classes ---------- */
+.text-center {
+  text-align: center; }
+
+/* ---------- Typography ---------- */
+h1,
+h2 {
+  font-size: 36px; }
+
+h2,
+h4 {
+  color: #666; }
+
+h2 {
+  line-height: 20px;
+  font-weight: 300;
+  color: #666; }
+
+h3 {
+  font-size: 16px;
+  font-weight: 600; }
+
+h4 {
+  font-size: 20px; }
+
+p {
+  line-height: 24px; }
+
+/* ---------- Grid  ---------- */
+/*
+  The columns inside a row are all floatinh to the left, and therefore taken
+  out of the flow of the page, and other elements will be placed as if the columns
+  do not exit. To prevent this, we will add a style that clears the flow:
+*/
+.section__row::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+/*
+  All these columns should be floating to the left, and have a padding of 15px
+
+*/
+/* For Mobile */
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  width: 100%; }
+
+/*
+  First we must calculate the percentage for one column: 100% / 12 columns = 8.33%
+  Then we make one class for each of the 12 columns, class="col-" and a number
+  defining how many columns the section should span.
+*/
+@media (min-width: 768px) {
+  /* For Tablets */
+  .col-m-1 {
+    width: 8.33%; }
+  .col-m-2 {
+    width: 16.66%; }
+  .col-m-3 {
+    width: 25%; }
+  .col-m-4 {
+    width: 33.33%; }
+  .col-m-5 {
+    width: 41.66%; }
+  .col-m-6 {
+    width: 50%; }
+  .col-m-7 {
+    width: 58.33%; }
+  .col-m-8 {
+    width: 66.66%; }
+  .col-m-9 {
+    width: 75%; }
+  .col-m-10 {
+    width: 83.33%; }
+  .col-m-11 {
+    width: 91.66%; }
+  .col-m-12 {
+    width: 100%; } }
+
+@media (min-width: 1024px) {
+  /* For desktops */
+  .col-lg-1 {
+    width: 8.33%; }
+  .col-lg-2 {
+    width: 16.66%; }
+  .col-lg-3 {
+    width: 25%; }
+  .col-lg-4 {
+    width: 33.33%; }
+  .col-lg-5 {
+    width: 41.66%; }
+  .col-lg-6 {
+    width: 50%; }
+  .col-lg-7 {
+    width: 58.33%; }
+  .col-lg-8 {
+    width: 66.66%; }
+  .col-lg-9 {
+    width: 75%; }
+  .col-lg-10 {
+    width: 83.33%; }
+  .col-lg-11 {
+    width: 91.66%; }
+  .col-lg-12 {
+    width: 100%; } }
+
+/* ---------- Button  ---------- */
+.button {
+  color: #71bd46;
+  background-color: transparent;
+  border: 1px solid #71bd46;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 10px 16px;
+  transition: all .5s; }
+
+.button:hover {
+  background-color: #71bd46;
+  color: #fff;
+  cursor: pointer; }
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 80px 0 40px 0; }
+
+.section__container {
+  max-width: 1140px;
+  margin: auto; }
+
+.section__title {
+  padding: 0 0 40px 15px; }
+  .section__title hr {
+    height: 2px;
+    width: 60px;
+    background: #71bd46;
+    position: relative;
+    border: 0;
+    margin: 30px 0 0 0; }
+
+/* ---------- Navigation ---------- */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  height: 50px;
+  transition: all .5s; }
+
+.navbar__links {
+  float: right;
+  transition: all .5s; }
+
+.navbar__links li {
+  display: inline;
+  padding: 5px; }
+
+.navbar__link {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #bbb;
+  letter-spacing: 1px;
+  transition: all .5s; }
+
+.navbar__link:hover {
+  color: #71bd46; }
+
+.navbar .navbar__link:not(.navbar__icon) {
+  display: none; }
+
+.navbar--responsive {
+  height: 250px;
+  display: block;
+  position: relative; }
+
+.navbar--responsive ul {
+  float: none;
+  display: block;
+  text-align: left;
+  padding: 20px 0 0 20px; }
+
+.navbar--responsive .navbar__link .navbar__icon {
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.navbar--responsive .navbar__link:not(.navbar__icon) {
+  display: block; }
+
+.navbar--responsive .navbar__brand {
+  display: none !important; }
+
+.navbar .navbar__icon {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 30px; }
+
+@media (min-width: 425px) {
+  .navbar {
+    height: 60px;
+    background-color: transparent; }
+  .navbar__links {
+    margin: 30px 30px 0 0; }
+  .navbar__brand {
+    position: absolute;
+    left: 70px;
+    font-size: 22px;
+    color: #ddd;
+    text-transform: none;
+    font-weight: 700; }
+  .navbar .navbar__link:not(.navbar__icon) {
+    display: inline; }
+  .navbar .navbar__icon {
+    display: none; } }
+
+@media (min-width: 1024px) {
+  .navbar {
+    height: 70px; }
+  .navbar__links {
+    margin: 40px 60px 0 0; } }
+
+/* ---------- Header Section  ---------- */
+.section--header {
+  background: url(../img/header-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; }
+  .section--header .section__content {
+    padding-top: 25%; }
+    .section--header .section__content h1 {
+      font-size: 60px;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 15px; }
+    .section--header .section__content span {
+      color: #71bd46;
+      font-weight: 700; }
+    .section--header .section__content p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 60px; }
+
+@media (min-width: 768px) {
+  .section--header {
+    height: 75vh; }
+    .section--header .section__content {
+      padding-top: 5%; } }
+
+@media (min-width: 1024px) {
+  .section--header .section__content {
+    padding-top: 10%; } }
+
+/* ---------- About Section   ---------- */
+.section--about {
+  background-color: #f6f6f6; }
+  .section--about h4 {
+    border-bottom: 1px solid #b8dea2;
+    padding-bottom: 20px;
+    display: inline-block;
+    margin-bottom: 25px; }
+  .section--about p {
+    color: #888;
+    margin-bottom: 25px; }
+
+/* ---------- Services Section  ---------- */
+.section--services .fa {
+  font-size: 36px;
+  color: #71bd46;
+  margin-bottom: 20px;
+  display: block; }
+
+.section--services h4 {
+  border-bottom: 1px solid #b8dea2;
+  padding-bottom: 20px;
+  display: inline-block;
+  margin-bottom: 20px; }
+
+.section--services p {
+  color: #888;
+  margin-bottom: 20px; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */ }
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px; }
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px; }
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s; }
+
+@keyframes zoom {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s; }
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer; }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%; } }
+
+img {
+  width: 100%; }
+
+.container {
+  max-width: 1140px;
+  margin: auto; }
+
+.grid {
+  display: block; }
+
+.col {
+  flex: 1;
+  padding: 10px; }
+
+@media (min-width: 768px) {
+  .grid {
+    display: flex; } }
+
+/* ---------- Portfolio Section  ---------- */
+.section--portfolio {
+  background-color: #f6f6f6; }
+  .section--portfolio img {
+    transition: all .5s; }
+  .section--portfolio img:hover {
+    opacity: 0.5;
+    cursor: pointer; }
+
+/* ---------- Team Section   ---------- */
+.section--team h3 {
+  margin-bottom: 10px; }
+
+.section--team p {
+  color: #888; }
+
+/* ---------- Contact Section  ---------- */
+.section--contact {
+  background-color: #f6f6f6; }
+  .section--contact .section--contact__info {
+    margin-bottom: 35px; }
+  .section--contact h4 {
+    margin-bottom: 40px; }
+  .section--contact .fa {
+    color: #71bd46;
+    margin-right: 20px; }
+  .section--contact p {
+    color: #888; }
+  .section--contact .form input,
+  .section--contact .form textarea {
+    display: block;
+    width: 95%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    font-size: 14px; }
+  .section--contact .form input::placeholder,
+  .section--contact .form textarea::placeholder {
+    color: #555; }
+  .section--contact .form input:focus,
+  .section--contact .form textarea:focus {
+    outline: none; }
+  .section--contact .form textarea {
+    margin-bottom: 40px; }
+  .section--contact span .fa {
+    font-size: 24px;
+    padding: 15px;
+    transition: all .5s; }
+  .section--contact span .fa:hover {
+    transform: scale(1.4);
+    cursor: pointer; }
+
+/* ---------- Footer Section ---------- */
+footer {
+  background-color: #333;
+  text-align: center;
+  padding: 20px; }
+  footer p {
+    color: #888; }
+  footer a {
+    color: #aaa; }

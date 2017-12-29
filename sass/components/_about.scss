@@ -1,0 +1,16 @@
+/* ---------- About Section   ---------- */
+
+.section--about {
+  background-color: $gray-light;
+  h4 {
+    border-bottom: 1px solid $green-light;
+    padding-bottom: 20px;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+
+  p {
+    color: #888;
+    margin-bottom: 25px;
+  }
+}
